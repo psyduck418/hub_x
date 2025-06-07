@@ -89,26 +89,17 @@
     align-items: flex-end !important;
 }
 
-.list-weapons {
+/* .list-weapons { */
 /*     height: 250%;
     width: 200%;
     position: relative;
     bottom: 0px;
     left: -110px;     */
-}
+/* } */
 
-.list-weapons {
-	display: flex;
-	flex-direction: row-reverse !important;
-/* 	align-items: center !important; */
-/* 	justify-content: flex-end; */
-	width: 45px;
-	height: 45px;
-	opacity: 1;
-	transform: scaleX(1) rotate(4deg);
-/* 	border-right: 4px solid hsl(var(--clr-primary-200)); */
-/* 	border-radius: 0.5rem;
-	padding-right: 1rem; */
+.list-weapons > .weapon-cont > .bottom > img {
+    position: fixed;
+    top: 20rem;
 }
 
 .weapon-name.text-1 {
@@ -116,14 +107,8 @@
     
 }
 
-.bottom[data-v-4f0772fa] {
-    opacity: 0;
-    display: flex;
-}
-
-.bottom.is-selected[data-v-4f0772fa] {
-    opacity: 1;
-    position: sticky;
+.bottom:not(.is-selected) {
+    display: none;
 }
 .info-key-cont,
 .mWwn,
@@ -133,27 +118,20 @@
 
 .quantity[data-v-4f0772fa] {
     display: flex;
-    align-items: center;
-    font-size: 96px;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 3px;
-    height: 68.8px;
-    line-height: 32px;
-    margin-left: 8px;
-    padding: 6.4px 20px;
-    font-family: Sans-serif;
-    position: relative;
+    background: transparent;
+    color: var(--pink);
 }
 
 .ammunition {
     background: transparent !important;
-    display: inline-block;
-    position: relative;
-    left: -600px;
-    bottom: 0.7%;
-    color: #bf81f3;
-    font-size: 1rem;
+    color: var(--pink);
 }
+
+/* .state-weapon-active>.ammunition:after { */
+/* 	content: "∞"; */
+/* 	font-size: 96px; */
+/*     color: #bf81f3; */
+/* } */
 
 .chat {
     margin-bottom: -80px;
